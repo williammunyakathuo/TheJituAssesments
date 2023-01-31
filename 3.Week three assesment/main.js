@@ -56,9 +56,9 @@ let body = document.getElementsByTagName("body");
 
 try {
     function traverse(p_element,p_callback) {
-       function p_callback(p_element)
-        var list = p_element.children;
-        for (var i = 0; i < list.length; i++) {
+        p_callback(p_element);
+        let list = p_element.children;
+        for (let i = 0; i < list.length; i++) {
             traverse(list[i],p_callback);  
         }
      }
